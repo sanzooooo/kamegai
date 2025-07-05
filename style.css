@@ -3,7 +3,7 @@
   @keyframes fade-in-up {
     0% {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(10px); /* より自然なモーション */
     }
     100% {
       opacity: 1;
@@ -11,9 +11,10 @@
     }
   }
 
-  /* アニメーション適用 */
+  /* アニメーション適用（fill-mode: bothで開始前後も維持） */
   .animate-fade-in-up {
-    animation: fade-in-up 0.8s ease-out both;
+    opacity: 0;
+    animation: fade-in-up 1s ease-out both;
   }
 
   /* アニメーションディレイ */
@@ -22,7 +23,7 @@
   .delay-1000 { animation-delay: 1s; }
   .delay-1400 { animation-delay: 1.4s; }
 
-  /* ヒーローセクションの画像調整 */
+  /* ヒーローセクションの背景画像 */
   .hero-image {
     position: absolute;
     inset: 0;
@@ -33,7 +34,15 @@
     z-index: 0;
   }
 
-  /* ヒーローテキストの中央配置 */
+  /* オーバーレイ（背景を暗くする） */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+
+  /* テキスト全体の配置 */
   .hero-text-container {
     position: relative;
     z-index: 10;
@@ -47,7 +56,7 @@
     padding: 1rem;
   }
 
-  /* Playfairフォント */
+  /* Playfairフォント適用 */
   .playfair {
     font-family: 'Playfair Display', serif;
   }
