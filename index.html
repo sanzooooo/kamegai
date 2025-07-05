@@ -1,141 +1,160 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>亀貝 サンゾウ</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>亀貝 サンゾウ</title>
 
-    <!-- SEO & Favicon -->
-    <meta name="description" content="亀貝康明のポートフォリオと挑戦の記録。AI・Webtoon・地方創生に関する活動をまとめた個人サイト。" />
-    <link rel="icon" href="./public/favicon.ico" />
+  <!-- SEO & Favicon -->
+  <meta name="description" content="亀貝康明のポートフォリオと挑戦の記録。AI・Webtoon・地方創生に関する活動をまとめた個人サイト。" />
+  <link rel="icon" href="./public/favicon.ico" />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
 
-    <!-- Font Awesome（アイコン） -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Font Awesome（アイコン） -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <!-- TailwindCSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
+  <!-- フォント設定 -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+
+  <!-- アニメーションCSS -->
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
       }
-      h1, h2, h3 {
-        font-family: 'Playfair Display', serif;
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
-    </style>
-  </head>
-  <body class="bg-white text-gray-900">
+    }
 
-    <!-- Hero Section -->
-    <section class="relative w-full h-screen bg-center bg-cover text-white" style="background-image: url('./public/hero.png');">
-      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-      <div class="relative z-10 flex flex-col justify-center items-center h-full px-6 text-center">
-        <h1 class="text-5xl md:text-7xl font-bold leading-snug tracking-wider mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-          亀貝 サンゾウ
-        </h1>
-        <p class="text-lg md:text-2xl font-light mb-8 tracking-wide">Challenge is My Life</p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <a href="https://www.youtube.com/@kamegaisanzo" target="_blank"
-            class="px-6 py-3 border border-white rounded-full hover:bg-white hover:text-black transition">
-            YouTubeを見る
-          </a>
-          <a href="https://note.com/kamegai" target="_blank"
-            class="px-6 py-3 border border-white rounded-full hover:bg-white hover:text-black transition">
-            noteを見る
-          </a>
-        </div>
+    .animate-fade-in-up {
+      opacity: 0;
+      animation: fadeInUp 1.2s ease-out forwards;
+    }
+
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-600 { animation-delay: 0.6s; }
+    .delay-1000 { animation-delay: 1s; }
+    .delay-1400 { animation-delay: 1.4s; }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900">
+
+  <!-- ヒーローセクション -->
+<section class="relative min-h-[700px] md:h-screen flex items-center justify-center text-white overflow-hidden">
+    <!-- 背景画像 -->
+    <div class="absolute inset-0 z-0">
+      <img src="./public/hero.png" alt="Hero Background" class="w-full h-full object-cover object-center" />
+    </div>
+  
+    <!-- オーバーレイ -->
+    <div class="absolute inset-0 bg-black/50 z-10"></div>
+  
+    <!-- コンテンツ -->
+    <div class="relative z-20 text-center px-4">
+      <h1 class="text-4xl md:text-6xl font-bold animate-fade-in-up delay-200">亀貝サンゾウ</h1>
+      <p class="mt-4 text-lg md:text-2xl animate-fade-in-up delay-600">経営者・クリエイター・バイブコーダーとして、すべての境界を越えて。</p>
+      <p class="mt-2 text-sm md:text-lg animate-fade-in-up delay-1000">日本と中華圏、リアルとバーチャル、人間とAI──つなぐ挑戦者。</p>
+      <a href="#about" class="mt-8 inline-block bg-white text-black font-semibold px-6 py-3 rounded-full shadow-lg animate-fade-in-up delay-1400 hover:bg-gray-200 transition">もっと知る</a>
+    </div>
+  </section>
+  
+
+  <!-- About Me -->
+  <section id="about" class="py-20 px-6 bg-white border-t border-gray-200">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6">About Me</h2>
+      <p class="text-lg leading-relaxed text-left">
+        カービューで営業からキャリアを開始し、上海でのマーケ支援、帰国後はゲームのマーケティングへ。
+        台湾ではYouTuber事務所の取締役としてトップインフルエンサーを支援し、自らも動画クリエイターに。
+        その後、株式会社サンゾウを創業。地方創生や中華圏進出を通じて“表現の幅”を追求し続けている。
+        現在はMintoでAI・Webtoon領域のBizDevを担当、個人としてもAIを活用した創作活動に取り組んでいる。
+      </p>
+      <div class="flex justify-center gap-6 mt-6">
+        <a href="https://x.com/kamegai_sanzo" target="_blank" class="text-gray-600 hover:text-black text-2xl">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://www.youtube.com/@kamegaisanzo" target="_blank" class="text-gray-600 hover:text-black text-2xl">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://note.com/kamegai" target="_blank" class="text-gray-600 hover:text-black text-2xl">
+          <i class="fas fa-sticky-note"></i>
+        </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- About Me Section -->
-    <section class="py-20 px-6 bg-white border-t border-gray-200">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-6">About Me</h2>
-        <p class="text-lg leading-relaxed text-left">
-          カービューで営業からキャリアを開始し、上海でのマーケ支援、帰国後はゲームのマーケティングへ。
-          台湾ではYouTuber事務所の取締役としてトップインフルエンサーを支援し、自らも動画クリエイターに。
-          その後、株式会社サンゾウを創業。地方創生や中華圏進出を通じて“表現の幅”を追求し続けている。
-          現在はMintoでAI・Webtoon領域のBizDevを担当、個人としてもAIを活用した創作活動に取り組んでいる。
-        </p>
-        <div class="flex justify-center gap-6 mt-6">
-          <a href="https://x.com/kamegai_sanzo" target="_blank" class="text-gray-600 hover:text-black text-2xl">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://www.youtube.com/@kamegaisanzo" target="_blank" class="text-gray-600 hover:text-black text-2xl">
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a href="https://note.com/kamegai" target="_blank" class="text-gray-600 hover:text-black text-2xl">
-            <i class="fas fa-sticky-note"></i>
-          </a>
-        </div>
+  <!-- note記事 -->
+  <section id="note" class="py-16 px-6 bg-white text-gray-900 border-t border-gray-200">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-2 text-center">note</h2>
+      <p class="text-center text-gray-600 mb-12">過去・今・これからを言葉で綴る。</p>
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <!-- 記事カード -->
+        <a href="https://note.com/kamegai/n/n024294683685" target="_blank" class="flex flex-col justify-between h-full rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+          <img src="./public/niigata.jpeg" alt="新潟の記事" class="w-full h-48 object-cover">
+          <div class="p-4 flex flex-col justify-between flex-grow">
+            <h3 class="text-lg font-semibold mb-2">「大嫌いな新潟が大好きだ」</h3>
+            <p class="text-sm text-gray-600">3期目を終える株式会社サンゾウの心境。</p>
+          </div>
+        </a>
+        <a href="https://note.com/kamegai/n/ncb0f0f4aee5c" target="_blank" class="flex flex-col justify-between h-full rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+          <img src="./public/minto.jpeg" alt="Minto挑戦の記事" class="w-full h-48 object-cover">
+          <div class="p-4 flex flex-col justify-between flex-grow">
+            <h3 class="text-lg font-semibold mb-2">Mintoで挑戦する理由</h3>
+            <p class="text-sm text-gray-600">なぜ他人の船に飛び込んだのか。挑戦と決意の記録。</p>
+          </div>
+        </a>
+        <a href="https://note.com/kamegai/n/nf49297212902" target="_blank" class="flex flex-col justify-between h-full rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+          <img src="./public/capsule.jpeg" alt="カプセルジャパン卒業記事" class="w-full h-48 object-cover">
+          <div class="p-4 flex flex-col justify-between flex-grow">
+            <h3 class="text-lg font-semibold mb-2">カプセルジャパンを卒業します</h3>
+            <p class="text-sm text-gray-600">一区切りを迎えた挑戦の記録と感謝の思い。</p>
+          </div>
+        </a>
       </div>
-    </section>
-
-    <!-- Note Section -->
-    <section id="note" class="py-16 px-6 bg-white text-gray-900 border-t border-gray-200">
-      <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold mb-2 text-center">note</h2>
-        <p class="text-center text-gray-600 mb-12">過去・今・これからを言葉で綴る。</p>
-
-        <div class="grid md:grid-cols-3 gap-8 mb-12">
-          <!-- 記事1 -->
-          <a href="https://note.com/kamegai/n/n024294683685" target="_blank" class="flex flex-col justify-between h-full rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
-            <img src="./public/niigata.jpeg" alt="新潟の記事" class="w-full h-48 object-cover">
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h3 class="text-lg font-semibold mb-2">「大嫌いな新潟が大好きだ」</h3>
-              <p class="text-sm text-gray-600">3期目を終える株式会社サンゾウの心境。</p>
-            </div>
-          </a>
-
-          <!-- 記事2 -->
-          <a href="https://note.com/kamegai/n/ncb0f0f4aee5c" target="_blank" class="flex flex-col justify-between h-full rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
-            <img src="./public/minto.jpeg" alt="Minto挑戦の記事" class="w-full h-48 object-cover">
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h3 class="text-lg font-semibold mb-2">Mintoで挑戦する理由</h3>
-              <p class="text-sm text-gray-600">なぜ他人の船に飛び込んだのか。挑戦と決意の記録。</p>
-            </div>
-          </a>
-
-          <!-- 記事3 -->
-          <a href="https://note.com/kamegai/n/nf49297212902" target="_blank" class="flex flex-col justify-between h-full rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
-            <img src="./public/capsule.jpeg" alt="カプセルジャパン卒業記事" class="w-full h-48 object-cover">
-            <div class="p-4 flex flex-col justify-between flex-grow">
-              <h3 class="text-lg font-semibold mb-2">カプセルジャパンを卒業します</h3>
-              <p class="text-sm text-gray-600">一区切りを迎えた挑戦の記録と感謝の思い。</p>
-            </div>
-          </a>
-        </div>
-
-        <div class="text-center">
-          <a href="https://note.com/kamegai" target="_blank" class="inline-block px-6 py-3 border border-gray-800 rounded-full text-gray-800 hover:bg-gray-800 hover:text-white transition">
-            他のnote記事も見る
-          </a>
-        </div>
+      <div class="text-center">
+        <a href="https://note.com/kamegai" target="_blank" class="inline-block px-6 py-3 border border-gray-800 rounded-full text-gray-800 hover:bg-gray-800 hover:text-white transition">
+          他のnote記事も見る
+        </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- 実績カード：YouTube -->
-    <section class="bg-gray-100 py-20 px-6 border-t border-gray-200">
-      <div class="max-w-xl mx-auto text-center bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition">
-        <img src="./public/youtube-avatar.jpg" alt="YouTube" class="w-24 h-24 mx-auto rounded-full mb-4" />
-        <h3 class="text-2xl font-semibold mb-2">YouTubeチャンネル</h3>
-        <p class="text-base mb-4">台湾から始まり、人生を舞台映像で記録。自らが表現者として歩んできた過程を伝えるチャンネル。</p>
-        <a href="https://www.youtube.com/@kamegaisanzo" target="_blank" class="inline-block px-6 py-2 border border-gray-800 rounded-full text-gray-800 hover:bg-gray-800 hover:text-white transition">チャンネルを見る</a>
-      </div>
-    </section>
+  <!-- 実績カード：YouTube -->
+  <section class="bg-gray-100 py-20 px-6 border-t border-gray-200">
+    <div class="max-w-xl mx-auto text-center bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition">
+      <img src="./public/youtube-avatar.jpg" alt="YouTube" class="w-24 h-24 mx-auto rounded-full mb-4" />
+      <h3 class="text-2xl font-semibold mb-2">YouTubeチャンネル</h3>
+      <p class="text-base mb-4">台湾から始まり、人生を舞台映像で記録。自らが表現者として歩んできた過程を伝えるチャンネル。</p>
+      <a href="https://www.youtube.com/@kamegaisanzo" target="_blank" class="inline-block px-6 py-2 border border-gray-800 rounded-full text-gray-800 hover:bg-gray-800 hover:text-white transition">チャンネルを見る</a>
+    </div>
+  </section>
 
-    <!-- 実績カード：咲々木 花 -->
-    <section class="bg-white py-20 px-6 border-t border-gray-200">
-      <div class="max-w-xl mx-auto text-center bg-gray-100 rounded-xl shadow-lg p-6 hover:scale-105 transition">
-        <img src="./public/sasaki-hana.jpg" alt="咲々木 花" class="w-24 h-24 mx-auto rounded-full mb-4" />
-        <h3 class="text-2xl font-semibold mb-2">咲々木 花</h3>
-        <p class="text-base mb-4">バーチャルアイドルを育成中。Xを中心に音楽・LINE bot・Webtoonなど幅広く展開中。</p>
-        <a href="https://lit.link/sasakihana" target="_blank" class="inline-block px-6 py-2 border border-gray-800 rounded-full text-gray-800 hover:bg-gray-800 hover:text-white transition">活動リンクを見る</a>
-      </div>
-    </section>
+  <!-- 実績カード：咲々木 花 -->
+  <section class="bg-white py-20 px-6 border-t border-gray-200">
+    <div class="max-w-xl mx-auto text-center bg-gray-100 rounded-xl shadow-lg p-6 hover:scale-105 transition">
+      <img src="./public/sasaki-hana.jpg" alt="咲々木 花" class="w-24 h-24 mx-auto rounded-full mb-4" />
+      <h3 class="text-2xl font-semibold mb-2">咲々木 花</h3>
+      <p class="text-base mb-4">バーチャルアイドルを育成中。Xを中心に音楽・LINE bot・Webtoonなど幅広く展開中。</p>
+      <a href="https://lit.link/sasakihana" target="_blank" class="inline-block px-6 py-2 border border-gray-800 rounded-full text-gray-800 hover:bg-gray-800 hover:text-white transition">活動リンクを見る</a>
+    </div>
+  </section>
 
-  </body>
+</body>
 </html>
