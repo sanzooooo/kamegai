@@ -10,7 +10,7 @@
   <link rel="icon" href="./public/favicon.ico" />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -18,7 +18,7 @@
   <!-- TailwindCSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Font Settings -->
+  <!-- Font & Animation Settings -->
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -26,10 +26,7 @@
     h1, h2, h3 {
       font-family: 'Playfair Display', serif;
     }
-  </style>
 
-  <!-- Animation CSS -->
-  <style>
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -55,6 +52,7 @@
 
 <body class="bg-white text-gray-900">
 
+  <!-- Hero Section -->
   <section class="relative w-full h-screen bg-black">
     <!-- 背景画像 -->
     <img
@@ -74,16 +72,14 @@
         <span class="block sm:inline">人間とAIを</span><br class="sm:hidden">
         <span class="block sm:inline">繋ぐ挑戦者</span>
       </h1>
-      <p class="mt-6 text-xl sm:text-3xl font-semibold opacity-0 animate-fade-in-up delay-1000">
-        亀貝サンゾウ
-      </p>            
+      <p class="mt-6 text-xl sm:text-3xl font-semibold animate-fade-in-up delay-1000">
+        <span class="bg-black/50 px-4 py-2 rounded">亀貝サンゾウ</span>
+      </p>
     </div>
   </section>
 
 </body>
 </html>
-
-  
 
   <!-- About Me -->
   <section id="about" class="py-20 px-6 bg-white border-t border-gray-200">
